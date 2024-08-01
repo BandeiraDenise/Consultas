@@ -2,22 +2,14 @@ version: '3.8'
 
 services:
   oracle:
-    image: oracle/database:19c
+    image: gvenzl/oracle-free
     container_name: oracle-db
-    environment:
-      - ORACLE_PWD=mysecretpassword
-      - ORACLE_ALLOW_REMOTE=true
     ports:
       - "1521:1521"
-      - "5500:5500"
+    environment:
+      - ORACLE_PASSWORD=your_password
     volumes:
-      - oracle-data:/opt/oracle/oradata
-    networks:
-      - oracle-network
+      - oracle-data:/u01/app/oracle
 
 volumes:
   oracle-data:
-
-networks:
-  oracle-network:
-
