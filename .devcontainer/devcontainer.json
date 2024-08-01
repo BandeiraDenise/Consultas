@@ -2,7 +2,7 @@
   "name": "Oracle DB with SQLcl",
   "dockerComposeFile": "docker-compose.yml",
   "service": "sqlcl",
-  "workspaceFolder": "/workspace",
+  "workspaceFolder": "/workspaces/Consultas",
   "extensions": [
     "ms-azuretools.vscode-docker"
   ],
