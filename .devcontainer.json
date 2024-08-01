@@ -1,24 +1,13 @@
 {
-  "name": "Oracle Dev Container",
+  "version": "2",
   "dockerComposeFile": "docker-compose.yml",
   "service": "oracle",
-  "workspaceFolder": "/workspaces/Consultas",
-  "extensions": [
-    "oracle.oracle-developer-tools-for-visual-studio-code",
-  ],
+  "workspaceFolder": "/workspace/Consultas",
+  "postCreateCommand": "echo 'Oracle DB setup complete!'",
   "settings": {
-    "sqltools.connections": [
-      {
-        "name": "OracleDB",
-        "driver": "Oracle",
-        "server": "localhost",
-        "port": 1521,
-        "database": "ORCL",
-        "username": "system",
-        "password": "your_password",
-        "connectString": "localhost:1521/ORCL"
-      }
-    ]
+    "terminal.integrated.shell.linux": "/bin/bash"
   },
-  "postCreateCommand": "echo 'Container setup complete!'"
+  "extensions": [
+    "oracle.oracledevtools"
+  ]
 }
