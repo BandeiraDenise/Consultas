@@ -7,7 +7,7 @@ services:
     ports:
       - "1521:1521"
     environment:
-      - ORACLE_PASSWORD=your_password
+      - ORACLE_PASSWORD=oracle
     volumes:
       - oracle-data:/u01/app/oracle
 
