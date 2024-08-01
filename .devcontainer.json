@@ -1,13 +1,13 @@
 {
-  "version": "2",
+  "name": "Oracle XE 21c Development Container",
   "dockerComposeFile": "docker-compose.yml",
   "service": "oracle",
-  "workspaceFolder": "/workspace/Consultas",
-  "postCreateCommand": "echo 'Oracle DB setup complete!'",
+  "workspaceFolder": "/workspaces/Consultas",
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
   },
   "extensions": [
     "oracle.oracledevtools"
-  ]
+  ],
+  "postCreateCommand": "echo 'Container setup completed!'"
 }
