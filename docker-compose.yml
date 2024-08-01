@@ -2,14 +2,14 @@ version: '3.8'
 
 services:
   oracle:
-    image: gvenzl/oracle-free
+    image: container-registry.oracle.com/database/express:21c
     container_name: oracle-db
     ports:
       - "1521:1521"
     environment:
-      - ORACLE_PASSWORD=oracle
+      - ORACLE_PWD=your_password
     volumes:
-      - oracle-data:/u01/app/oracle
+      - oracle-data:/opt/oracle/oradata
 
 volumes:
   oracle-data:
