@@ -1,24 +1,24 @@
 {
-  "name": "Oracle 11g Dev Container",
+  "name": "Oracle Dev Container",
   "dockerComposeFile": "docker-compose.yml",
-	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "service": "oracle",
+  "workspaceFolder": "/workspaces/Consultas",
   "extensions": [
-        "redhat.vscode-yaml",
-        "ms-azuretools.vscode-docker",
-        "oracle.oracledevtools"  
+    "oracle.oracle-developer-tools-for-visual-studio-code",
   ],
   "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash",
-        "oracle.oracledevtools.connections": [
-            {
-                "name": "XE",
-                "username": "system",
-                "password": "oracle",
-                "connectString": "localhost:1521/XE"
-            }
-        ]
+    "sqltools.connections": [
+      {
+        "name": "OracleDB",
+        "driver": "Oracle",
+        "server": "localhost",
+        "port": 1521,
+        "database": "ORCL",
+        "username": "system",
+        "password": "your_password",
+        "connectString": "localhost:1521/ORCL"
+      }
+    ]
   },
-  "postCreateCommand": "docker exec -it $(docker ps -qf 'name=oracle-xe') /bin/bash -c 'source /opt/oracle/scripts/init.sh && sqlplus system/oracle@localhost:1521/XE'"
+  "postCreateCommand": "echo 'Container setup complete!'"
 }
-
-
